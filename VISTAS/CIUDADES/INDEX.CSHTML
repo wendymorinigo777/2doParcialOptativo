@@ -1,0 +1,25 @@
+@model IEnumerable<OptativoSegundoParcialL.Models.Ciudad>
+
+<h2>Ciudades</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Departamento</th>
+            <th>Código Postal</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ciudad in Model)
+        {
+            <tr>
+                <td>@ciudad.id_Ciudad</td>
+                <td>@ciudad.Ciudad_Nombre</td>
+                <td>@ciudad.Departamento</td>
+                <td>@ciudad.Codigo_Postal</td>
+            </tr>
+        }
+    </tbody>
+</table>
