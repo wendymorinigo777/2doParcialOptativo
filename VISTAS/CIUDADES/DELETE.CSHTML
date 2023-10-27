@@ -1,0 +1,25 @@
+@model OptativoSegundoParcialL.Models.Ciudad
+@{
+    ViewData["Title"] = "Eliminar Ciudad";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<h3>¿Estás seguro de que quieres eliminar la ciudad seleccionada?</h3>
+
+<div>
+    <!-- Detalles de la ciudad -->
+</div>
+
+<form asp-action="DeleteConfirmed">
+    @Html.HiddenFor(model => model.id_Ciudad)
+
+    <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+    <a asp-action="Index">Cancelar y volver a la lista</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
