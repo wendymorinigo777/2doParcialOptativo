@@ -1,0 +1,29 @@
+@model IEnumerable<OptativoSegundoParcial.Models.Cliente>
+
+<h2>Clientes</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Id Persona</th>
+            <th>Fecha de Ingreso</th>
+            <th>Calificación</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var cliente in Model)
+    {
+        <tr>
+            <td>@cliente.id_Cliente</td>
+            <td>@cliente.id_Persona</td>
+            <td>@cliente.Fecha_Ingresada</td>
+            <td>@cliente.Calificacion</td>
+            <td>@cliente.Estado</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<a href="/Home">Volver a Home</a>
