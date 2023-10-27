@@ -1,0 +1,17 @@
+
+@model OptativoSegundoParcial.Models.Cliente
+
+<h2>Editar Cliente</h2>
+
+<form method="post" action="/api/Cliente/@Model.id_Cliente">
+    <input type="hidden" name="_method" value="PUT">
+    <label for="id_Persona">Id Persona:</label><br>
+    <input type="text" id="id_Persona" name="id_Persona" value="@Model.id_Persona"><br>
+    <label for="Calificacion">Calificación:</label><br>
+    <input type="text" id="Calificacion" name="Calificacion" value="@Model.Calificacion"><br>
+    <label for="Estado">Estado:</label><br>
+    <input type="text" id="Estado" name="Estado" value="@Model.Estado"><br>
+    <input type="submit" value="Guardar cambios">
+</form>
+
+<a href="/Home">Volver a Home</a>
