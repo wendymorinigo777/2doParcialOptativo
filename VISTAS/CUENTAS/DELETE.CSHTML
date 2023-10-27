@@ -1,0 +1,16 @@
+
+@model OptativoSegundoParcial.Models.Cuentas
+
+<h2>¿Estás seguro de que quieres eliminar la cuenta seleccionada?</h2>
+
+<form method="post" action="/api/Cuentas/@Model.id_Cuenta">
+    <!-- Detalles de la cuenta -->
+    
+    <input type="submit" value="Eliminar">
+</form>
+
+<a href="/Home">Volver a Home</a>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
